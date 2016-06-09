@@ -21,6 +21,12 @@ Esta carpeta contine el código del programa desarrollado para interpretar y mos
 Para su ejecución, será necesario disponer del software [Processing](https://processing.org/) en el equipo informático que está
 recibiendo los datos.
 
+#### Directorio [electron](./electron/)
+
+Esta carpeta contine el código del programa desarrollado para interpretar y mostrar los datos transmitidos por el satélite.
+
+En esta ocasión se ha empleado [Electron](http://electron.atom.io/) como envolvente para su ejecución en múltiples sistemas operativos.
+
 ## Licencia
 
 [![Creaive Commons 4.0 logo](img/cc40.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)

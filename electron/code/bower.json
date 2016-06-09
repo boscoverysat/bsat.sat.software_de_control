@@ -1,0 +1,25 @@
+{
+  "name": "bsat-telemetry-app",
+  "description": "BSAT Telemetry Application",
+  "main": "main.js",
+  "authors": [
+    "Dailos Rafael Díaz Lara ( ddialar@gmail.com )"
+  ],
+  "license": "CC-4.0",
+  "keywords": [
+    "BoscoverySAT"
+  ],
+  "homepage": "https://github.com/boscoverysat/bsat.sat.pruebas_de_integracion",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Chart.js": "^2.1.4",
+    "bootstrap": "^3.3.6",
+    "angular": "1.5.5"
+  }
+}

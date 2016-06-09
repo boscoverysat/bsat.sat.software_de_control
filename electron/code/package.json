@@ -1,0 +1,28 @@
+{
+  "name": "bsat-telemetry",
+  "version": "1.0.0-alpha",
+  "description": "A basic application to show the data provided by the BoscoverySAT telemetry.",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boscoverysat/bsat.sat.software_de_abordo.git"
+  },
+  "keywords": [
+    "BoscoverySAT",
+    "telemetry",
+    "cubesat",
+    "dashboard"
+  ],
+  "author": "Dailos Rafael Díaz Lara ( ddialar@gmail.com )",
+  "license": "CC-4.0",
+  "bugs": {
+    "url": "https://github.com/boscoverysat/bsat.sat.software_de_abordo/issues"
+  },
+  "homepage": "https://github.com/boscoverysat/bsat.sat.software_de_abordo#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
+}
