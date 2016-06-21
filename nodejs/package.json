@@ -1,0 +1,14 @@
+{
+  "name": "bsat.sat.pruebas_de_integracion",
+  "version": "0.1.0",
+  "description": "Interfaz gráfica para captura de telemetría.",
+  "dependencies": {
+    "gulp": "^3.5.6",
+    "serialport": "^2.0.4"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "gulp-util": "^2.2.14",
+    "shelljs": "^0.3.0"
+  }
+}
