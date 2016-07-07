@@ -1,7 +1,8 @@
 angular
   .module('telemetry', [
     'CubeModule',
-    'LogsModule'
+    'LogsModule',
+    'BatteryChartModule'
   ])
   // .run(appRun)
   // .config(appConfig)

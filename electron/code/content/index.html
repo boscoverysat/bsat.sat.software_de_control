@@ -14,10 +14,11 @@
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/Chart.js/dist/Chart.min.js"></script>
 
-    <script src="components/cube/cube.js"></script>
+    <!-- <script src="components/cube/cube.js"></script>
     <script src="components/logs/logs.js"></script>
+    <script src="components/battery-chart/battery-chart.js"></script>
 
-    <script src="js/angular-app.js"></script>
+    <script src="js/angular-app.js"></script> -->
 
   </head>
   <body ng-app="telemetry">
@@ -44,10 +45,11 @@
               <canvas id="temperature-chart" width="100%" height="30%"></canvas>
             </div>
             <!-- Battery Level -->
-            <div class="col-sm-12">
+            <battery-chart-section class="col-sm-12"></battery-chart-section>
+            <!-- <div class="col-sm-12">
               <h4><i class="fa fa-battery-three-quarters"></i> Carga de Baterías [ V ]</h4>
               <canvas id="battery-chart" width="100%" height="30%"></canvas>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -55,6 +57,12 @@
 
     <script src="js/light-chart.js"></script>
     <script src="js/temperature-chart.js"></script>
-    <script src="js/battery-chart.js"></script>
+    <!-- <script src="js/battery-chart.js"></script> -->
+
+    <script src="components/cube/cube.js"></script>
+    <script src="components/logs/logs.js"></script>
+    <script src="components/battery-chart/battery-chart.js"></script>
+
+    <script src="js/angular-app.js"></script>
   </body>
 </html>
