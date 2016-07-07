@@ -1,3 +1,5 @@
+'use strict';
+
 angular
   .module('LightChartModule', [])
   .service('LightChartService', LightChartService)
@@ -5,11 +7,14 @@ angular
   .directive('lightChartSection', LightChartSection)
   ;
 
-function LightChartService() {}
+function LightChartService() {};
 
 function LightChartController() {
+  'use strict';
+
   var self = this;
 
+  self.lightChart;
   self.ctx = document.getElementById('light-chart');
   self.chartType = 'horizontalBar';
   self.chartLabels = ['Side 1', 'Side 2', 'Side 3', 'Side 4'];
@@ -50,12 +55,41 @@ function LightChartController() {
     }
   };
 
-  self.lightChart = new Chart(self.ctx, {
+  self.createChart = function() {
+    self.lightChart = new Chart(self.ctx, {
       type: self.chartType,
       data: self.chartDataSet,
       options: self.chartOptions
-  });
-}
+    });
+  };
+
+  self.updateChart = function(newValues) {
+    if (angular.isDefined(newValues) && newValues.length > 0) {
+      newValues
+        .forEach(function(value, index) {
+          self.lightChart.data.datasets[0].data[index] = value;
+        });
+
+      self.lightChart.update();
+    }
+  };
+
+  self.createChart();
+
+  // TESTING CODE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  self.mockData = function() {
+    console.log('Running mockData');
+    var newValuesArray = [];
+
+    for (var i = 0; i < 4; i++) {
+      newValuesArray.push(Math.random() * 10);
+    }
+
+    self.updateChart(newValuesArray);
+  };
+  // TESTING CODE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+};
 
 function LightChartSection() {
   return {
@@ -64,5 +98,5 @@ function LightChartSection() {
     controller: 'LightChartController',
     controllerAs: 'vm',
     templateUrl: 'components/light-chart/light-chart.html'
-  }
-}
+  };
+};
