@@ -1,3 +1,5 @@
+'use strict';
+
 angular
   .module('LogsModule', [])
   .service('LogsService', LogsService)
