@@ -13,13 +13,6 @@
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/Chart.js/dist/Chart.min.js"></script>
-
-    <!-- <script src="components/cube/cube.js"></script>
-    <script src="components/logs/logs.js"></script>
-    <script src="components/battery-chart/battery-chart.js"></script>
-
-    <script src="js/angular-app.js"></script> -->
-
   </head>
   <body ng-app="telemetry">
     <div class="container-fluid">
@@ -35,10 +28,11 @@
         <div class="col-md-12 col-lg-6">
           <div class="row">
             <!-- Light Level -->
-            <div class="col-sm-12">
+            <light-chart-section class="col-sm-12"></light-chart-section>
+            <!-- <div class="col-sm-12">
               <h4><i class="fa fa-sun-o"></i> Nivel Luminoso [ lux ]</h4>
               <canvas id="light-chart" width="100%" height="30%"></canvas>
-            </div>
+            </div> -->
             <!-- Temperature Level -->
             <div class="col-sm-12">
               <h4><i class="fa fa-fire"></i> Temperatura [ ºC ]</h4>
@@ -55,12 +49,13 @@
       </div>
     </div>
 
-    <script src="js/light-chart.js"></script>
+    <!-- <script src="js/light-chart.js"></script> -->
     <script src="js/temperature-chart.js"></script>
     <!-- <script src="js/battery-chart.js"></script> -->
 
     <script src="components/cube/cube.js"></script>
     <script src="components/logs/logs.js"></script>
+    <script src="components/light-chart/light-chart.js"></script>
     <script src="components/battery-chart/battery-chart.js"></script>
 
     <script src="js/angular-app.js"></script>
