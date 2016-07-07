@@ -3,6 +3,7 @@ angular
     'CubeModule',
     'LogsModule',
     'LightChartModule',
+    'TemperatureChartModule',
     'BatteryChartModule'
   ])
   // .run(appRun)
