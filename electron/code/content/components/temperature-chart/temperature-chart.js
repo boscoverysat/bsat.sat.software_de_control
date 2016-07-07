@@ -1,3 +1,5 @@
+'use strict';
+
 angular
   .module('TemperatureChartModule', [])
   .service('TemperatureChartService', TemperatureChartService)
@@ -52,11 +54,39 @@ function TemperatureChartController() {
     }
   };
 
-  self.temperatureChart = new Chart(self.ctx, {
+  self.createChart = function() {
+    self.temperatureChart = new Chart(self.ctx, {
       type: self.chartType,
       data: self.chartDataSet,
       options: self.chartOptions
-  });
+    });
+  };
+
+  self.updateChart = function(newValues) {
+    if (angular.isDefined(newValues) && newValues.length > 0) {
+      newValues
+        .forEach(function(value, index) {
+          self.temperatureChart.data.datasets[0].data[index] = value;
+        });
+
+      self.temperatureChart.update();
+    }
+  };
+
+  self.createChart();
+
+  // TESTING CODE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  self.mockData = function() {
+    console.log('Running mockData');
+    var newValuesArray = [];
+
+    for (var i = 0; i < 6; i++) {
+      newValuesArray.push(Math.random() * 10);
+    }
+
+    self.updateChart(newValuesArray);
+  };
+  // TESTING CODE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
 
 function TemperatureChartSection() {
