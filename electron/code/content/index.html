@@ -2,48 +2,48 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>BoscoverySAT - Telemetry</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="components/cube/cube.css">
 
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/Chart.js/dist/Chart.min.js"></script>
+
+    <script src="components/cube/cube.js"></script>
+    <script src="components/logs/logs.js"></script>
+
+    <script src="js/angular-app.js"></script>
+
   </head>
-  <body>
+  <body ng-app="telemetry">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 col-lg-6">
           <div class="row">
-            <div class="col-sm-12">
-              <h4><i class="fa fa-cube"></i> Orientación del Satélite</h4>
-              <div id="cube-container">
-                <div id="cube" class="animate">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12">
-              <h4><i class="fa fa-list"></i> Logs</h4>
-              <!-- <canvas id="temperature-chart" width="100%" height="30%"></canvas> -->
-            </div>
+            <!-- Cube -->
+            <cube-section class="col-sm-12"></cube-section>
+            <!-- Logs -->
+            <logs-section class="col-sm-12"></logs-section>
           </div>
         </div>
         <div class="col-md-12 col-lg-6">
           <div class="row">
+            <!-- Light Level -->
             <div class="col-sm-12">
               <h4><i class="fa fa-sun-o"></i> Nivel Luminoso [ lux ]</h4>
               <canvas id="light-chart" width="100%" height="30%"></canvas>
             </div>
+            <!-- Temperature Level -->
             <div class="col-sm-12">
               <h4><i class="fa fa-fire"></i> Temperatura [ ºC ]</h4>
               <canvas id="temperature-chart" width="100%" height="30%"></canvas>
             </div>
+            <!-- Battery Level -->
             <div class="col-sm-12">
               <h4><i class="fa fa-battery-three-quarters"></i> Carga de Baterías [ V ]</h4>
               <canvas id="battery-chart" width="100%" height="30%"></canvas>
@@ -52,11 +52,6 @@
         </div>
       </div>
     </div>
-
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../bower_components/Chart.js/dist/Chart.min.js"></script>
-    <script src="../bower_components/angular/angular.min.js"></script>
 
     <script src="js/light-chart.js"></script>
     <script src="js/temperature-chart.js"></script>
