@@ -1,5 +1,6 @@
+<h4><i class="fa fa-cube"></i> Orientación del Satélite</h4>
 <div id="cube-container">
-  <div id="cube" class="animate">
+  <div id="cube" ng-style="{'transform': vm.transform, '-webkit-transform': vm.transform, '-ms-transform': vm.transform}">
     <div></div>
     <div></div>
     <div></div>
@@ -7,4 +8,14 @@
     <div></div>
     <div></div>
   </div>
+</div>
+<div class="cube-lectures">
+  <ul>
+    <li><button type="button" ng-click="vm.increaseXScreenPosition()">+</button> <button type="button" ng-click="vm.decreaseXScreenPosition()">-</button> X - Axis: {{vm.xSatPosition}}</li>
+    <li><button type="button" ng-click="vm.increaseYScreenPosition()">+</button> <button type="button" ng-click="vm.decreaseYScreenPosition()">-</button> Y - Axis: {{vm.ySatPosition}}</li>
+    <li><button type="button" ng-click="vm.increaseZScreenPosition()">+</button> <button type="button" ng-click="vm.decreaseZScreenPosition()">-</button> Z - Axis: {{vm.zSatPosition}}</li>
+    <!-- <li>X - Axis: {{vm.xSatPosition}}</li>
+    <li>Y - Axis: {{vm.ySatPosition}}</li>
+    <li>Z - Axis: {{vm.zSatPosition}}</li> -->
+  </ul>
 </div>
