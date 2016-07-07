@@ -1,3 +1,5 @@
+'use strict';
+
 angular
   .module('CubeModule', [])
   .service('CubeService', CubeService)
@@ -7,10 +9,8 @@ angular
 
 function CubeService() {}
 
-function CubeController($scope, $timeout) {
+function CubeController() {
   var self = this;
-  self.scope = $scope;
-  self.timeout = $timeout;
 
   self.xSatPosition = 0;
   self.ySatPosition = 0;
