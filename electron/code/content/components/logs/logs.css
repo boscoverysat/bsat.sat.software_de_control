@@ -1,0 +1,18 @@
+.logs-table tbody {
+  height: 120px;
+  overflow-y: auto;
+}
+
+.logs-chart-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 30px auto 30px;
+}
+
+.logs-chart-container canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

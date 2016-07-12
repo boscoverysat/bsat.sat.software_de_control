@@ -1,4 +1,47 @@
 <h4><i class="fa fa-list"></i> Logs</h4>
-<p>X - Axis: {{vm.xPosition}}</p>
-<p>Y - Axis: {{vm.yPosition}}</p>
-<p>Z - Axis: {{vm.zPosition}}</p>
+<div class="row">
+  <div class="col-sm-8">
+    <table class="logs-table table table-condensed">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Time (ms)</th>
+          <th>Pitch (X)</th>
+          <th>Row (Y)</th>
+          <th>Yaw(Z)</th>
+          <th>Temp (ºC)</th>
+          <th>Light (Lux)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="satMessage in vm.satMessages">
+          <td>satMessage.order</td>
+          <td>satMessage.timestamp</td>
+          <td>satMessage.pitch</td>
+          <td>satMessage.row</td>
+          <td>satMessage.yaw</td>
+          <td>satMessage.temp</td>
+          <td>satMessage.light</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-sm-4">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Porcentaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="logs-chart-container">
+              <canvas id="logs-chart"></canvas>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
