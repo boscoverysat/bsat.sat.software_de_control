@@ -13,7 +13,7 @@ function LogsController() {
   var self = this;
 
   self.logsMessagesCollection = [];
-  self.logsCorrectCounter = 0;
+  self.logsCorrectCounter = 1;
   self.logsWrongCounter = 0;
   self.logsChart;
   self.ctx = document.getElementById('logs-chart').getContext('2d');
@@ -45,7 +45,7 @@ function LogsController() {
   };
 
   self.createChart = function() {
-    // NOTE: Context configutarion in order to full width chart.
+    // NOTE: Canvas element context configutarion in order to get a full width chart.
     self.ctx.canvas.width = 300;
     self.ctx.canvas.height = 300;
     self.logsChart = new Chart(self.ctx, {
@@ -56,15 +56,16 @@ function LogsController() {
   };
 
   self.updateLogsChart = function() {
-    self.logsChart.segments[0].value = self.logsCorrectCounter;
-    self.logsChart.segments[1].value = self.logsWrongCounter;
+    console.log(self.logsChart.data);
+
+    self.logsChart.data.datasets[0].data[0] = self.logsCorrectCounter;
+    self.logsChart.data.datasets[0].data[1] = self.logsWrongCounter;
     self.logsChart.update();
   };
 
   self.addCorrectMessage = function(message) {
     self.logsMessagesCollection.unshift(message);
     self.logsCorrectCounter++;
-    self.logsWrongCounter = 0;
     self.updateLogsChart();
   };
 
@@ -72,6 +73,31 @@ function LogsController() {
     self.logsWrongCounter++;
     self.updateLogsChart();
   };
+
+  // TESTING CODE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  self.messageCounter = 0;
+
+  self.mockData = function() {
+    console.log('Running mockData');
+    self.messageCounter++;
+
+    var testMessage = {
+      'order': self.messageCounter,
+      'timestamp': Date.now(),
+      'pitch': 10,
+      'row': 20,
+      'yaw': 30,
+      'temp': 25,
+      'light': 30
+    };
+
+    if (self.messageCounter % 3 !== 0) {
+      self.addCorrectMessage(testMessage);
+    } else {
+      self.addWrongMessage();
+    }
+  };
+  // TESTING CODE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
   self.createChart();
 }

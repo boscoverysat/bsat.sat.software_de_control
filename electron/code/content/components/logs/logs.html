@@ -4,24 +4,24 @@
     <table class="logs-table table table-condensed">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Time (ms)</th>
-          <th>Pitch (X)</th>
-          <th>Row (Y)</th>
-          <th>Yaw(Z)</th>
-          <th>Temp (ºC)</th>
-          <th>Light (Lux)</th>
+          <th class="col-xs-3">#</th>
+          <th class="col-xs-4">Time (ms)</th>
+          <th class="col-xs-1">Pitch (X)</th>
+          <th class="col-xs-1">Row (Y)</th>
+          <th class="col-xs-1">Yaw(Z)</th>
+          <th class="col-xs-1">Temp (ºC)</th>
+          <th class="col-xs-1">Light (Lux)</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="satMessage in vm.satMessages">
-          <td>satMessage.order</td>
-          <td>satMessage.timestamp</td>
-          <td>satMessage.pitch</td>
-          <td>satMessage.row</td>
-          <td>satMessage.yaw</td>
-          <td>satMessage.temp</td>
-          <td>satMessage.light</td>
+        <tr ng-repeat="logMessage in vm.logsMessagesCollection">
+          <td class="col-xs-3">{{logMessage.order}}</td>
+          <td class="col-xs-4">{{logMessage.timestamp}}</td>
+          <td class="col-xs-1">{{logMessage.pitch}}</td>
+          <td class="col-xs-1">{{logMessage.row}}</td>
+          <td class="col-xs-1">{{logMessage.yaw}}</td>
+          <td class="col-xs-1">{{logMessage.temp}}</td>
+          <td class="col-xs-1">{{logMessage.light}}</td>
         </tr>
       </tbody>
     </table>
@@ -44,4 +44,5 @@
       </tbody>
     </table>
   </div>
+  <button type="button" ng-click="vm.mockData()">Button</button>
 </div>

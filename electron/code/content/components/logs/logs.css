@@ -1,7 +1,68 @@
-.logs-table tbody {
-  height: 120px;
+/*.logs-table tbody {
+  max-height: 120px !important;
   overflow-y: auto;
 }
+
+.logs-table thead tr th,
+.logs-table tbody tr td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logs-table thead tr th:nth-child(1),
+.logs-table tbody tr td:nth-child(1) {
+  max-width: 15% !important;
+}
+
+.logs-table thead tr th:nth-child(2),
+.logs-table tbody tr td:nth-child(2) {
+  max-width: 25% !important;
+}
+
+.logs-table thead tr th:nth-child(3),
+.logs-table thead tr th:nth-child(4),
+.logs-table thead tr th:nth-child(5),
+.logs-table thead tr th:nth-child(6),
+.logs-table thead tr th:nth-child(7),
+.logs-table tbody tr td:nth-child(3),
+.logs-table tbody tr td:nth-child(4),
+.logs-table tbody tr td:nth-child(5),
+.logs-table tbody tr td:nth-child(6),
+.logs-table tbody tr td:nth-child(7) {
+  max-width: 12% !important;
+}*/
+
+
+.logs-table thead {
+  width: 100%;
+}
+.logs-table tbody {
+  width: 100% !important;
+  height: 230px;
+  overflow-y: auto;
+}
+.logs-table thead,
+.logs-table tbody,
+.logs-table tr,
+.logs-table td,
+.logs-table th {
+  display: block;
+}
+.logs-table thead > tr > th,
+.logs-table tbody > tr > td {
+  float: left;
+  border-bottom-width: 0;
+}
+.logs-table tbody tr td:nth-child(3),
+.logs-table tbody tr td:nth-child(4),
+.logs-table tbody tr td:nth-child(5),
+.logs-table tbody tr td:nth-child(6),
+.logs-table tbody tr td:nth-child(7) {
+  text-align: center;
+}
+
+
 
 .logs-chart-container {
   width: 100%;
