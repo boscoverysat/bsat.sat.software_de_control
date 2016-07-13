@@ -46,8 +46,8 @@ function LogsController() {
 
   self.createChart = function() {
     // NOTE: Canvas element context configutarion in order to get a full width chart.
-    self.ctx.canvas.width = 300;
-    self.ctx.canvas.height = 300;
+    self.ctx.canvas.width = 100;
+    self.ctx.canvas.height = 100;
     self.logsChart = new Chart(self.ctx, {
       type: self.chartType,
       data: self.chartDataSet,
@@ -64,6 +64,9 @@ function LogsController() {
   };
 
   self.addCorrectMessage = function(message) {
+    // if (self.logsMessagesCollection.length === 5) {
+    //   self.logsMessagesCollection.pop();
+    // }
     self.logsMessagesCollection.unshift(message);
     self.logsCorrectCounter++;
     self.updateLogsChart();

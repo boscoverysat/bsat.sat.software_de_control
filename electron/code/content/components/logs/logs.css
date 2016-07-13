@@ -1,8 +1,8 @@
 /*.logs-table tbody {
   max-height: 120px !important;
   overflow-y: auto;
-}
-
+}*/
+/*
 .logs-table thead tr th,
 .logs-table tbody tr td {
   white-space: nowrap;
@@ -34,15 +34,16 @@
 }*/
 
 
-.logs-table thead {
+/*.logs-table thead {
   width: 100%;
 }
 .logs-table tbody {
   width: 100% !important;
   height: 230px;
   overflow-y: auto;
-}
-.logs-table thead,
+}*/
+
+/*.logs-table thead,
 .logs-table tbody,
 .logs-table tr,
 .logs-table td,
@@ -60,6 +61,34 @@
 .logs-table tbody tr td:nth-child(6),
 .logs-table tbody tr td:nth-child(7) {
   text-align: center;
+}*/
+
+table {
+  width: 100%;
+}
+
+/*thead, tbody, tr, td, th { display: block; }*/
+
+tr:after {
+  content: ' ';
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+thead th {
+  height: 30px;
+
+  /*text-align: left;*/
+}
+
+.logs-table tbody {
+  height: 120px;
+  overflow-y: auto;
+}
+
+thead {
+  /* fallback */
 }
 
 

@@ -13,7 +13,7 @@
           <th class="col-xs-1">Light (Lux)</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody height="120px">
         <tr ng-repeat="logMessage in vm.logsMessagesCollection">
           <td class="col-xs-3">{{logMessage.order}}</td>
           <td class="col-xs-4">{{logMessage.timestamp}}</td>
@@ -27,7 +27,7 @@
     </table>
   </div>
   <div class="col-sm-4">
-    <table class="table table-condensed">
+    <table class="logs-chart-table table table-condensed">
       <thead>
         <tr>
           <th>Porcentaje</th>

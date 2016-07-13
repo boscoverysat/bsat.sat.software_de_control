@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/boscoverysat/bsat.sat.software_de_abordo#readme",
   "devDependencies": {
-    "electron-prebuilt": "^1.2.0",
+    "electron-prebuilt": "^1.2.7",
     "serialport": "^2.0.4"
   }
 }
