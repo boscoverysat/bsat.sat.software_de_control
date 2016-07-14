@@ -7,6 +7,9 @@ const BrowserWindow = electron.BrowserWindow
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+let SerialPort = require("serialport");
+let serialPort = null;
+
 
 function createWindow () {
   // Create the browser window.
@@ -20,7 +23,7 @@ function createWindow () {
   mainWindow.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -29,6 +32,15 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  console.log('Listing Serial Ports');
+  SerialPort.list(function (err, ports) {
+    ports.forEach(function(port) {
+      console.log(port.comName);        // /dev/ttyUSB0
+      console.log(port.pnpId);          // usb-FTDI_FT232R_USB_UART_A901CU92-if00-port0
+      console.log(port.manufacturer);   // FTDI
+    });
+  });
 }
 
 // This method will be called when Electron has finished
