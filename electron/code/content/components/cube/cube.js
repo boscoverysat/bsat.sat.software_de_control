@@ -76,6 +76,6 @@ function CubeSection() {
     scope: {},
     controller: 'CubeController',
     controllerAs: 'vm',
-    templateUrl: 'components/cube/cube.html'
+    templateUrl: 'content/components/cube/cube.html'
   }
 }
