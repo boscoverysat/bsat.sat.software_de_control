@@ -95,6 +95,6 @@ function TemperatureChartSection() {
     scope: {},
     controller: 'TemperatureChartController',
     controllerAs: 'vm',
-    templateUrl: 'components/temperature-chart/temperature-chart.html'
+    templateUrl: 'content/components/temperature-chart/temperature-chart.html'
   }
 }

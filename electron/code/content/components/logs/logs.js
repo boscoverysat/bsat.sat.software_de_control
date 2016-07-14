@@ -111,6 +111,6 @@ function LogsSection() {
     scope: {},
     controller: 'LogsController',
     controllerAs: 'vm',
-    templateUrl: 'components/logs/logs.html'
+    templateUrl: 'content/components/logs/logs.html'
   }
 }

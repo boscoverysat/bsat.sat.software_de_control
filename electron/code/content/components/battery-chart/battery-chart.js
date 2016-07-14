@@ -91,6 +91,6 @@ function BatteryChartSection() {
     scope: {},
     controller: 'BatteryChartController',
     controllerAs: 'vm',
-    templateUrl: 'components/battery-chart/battery-chart.html'
+    templateUrl: 'content/components/battery-chart/battery-chart.html'
   }
 }

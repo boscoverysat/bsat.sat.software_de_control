@@ -97,6 +97,6 @@ function LightChartSection() {
     scope: {},
     controller: 'LightChartController',
     controllerAs: 'vm',
-    templateUrl: 'components/light-chart/light-chart.html'
+    templateUrl: 'content/components/light-chart/light-chart.html'
   };
 };
