@@ -4,8 +4,8 @@
     <table class="logs-table table table-condensed">
       <thead>
         <tr>
-          <th class="col-xs-3">#</th>
-          <th class="col-xs-4">Time (ms)</th>
+          <th class="col-xs-2">#</th>
+          <th class="col-xs-5">Time (ms)</th>
           <th class="col-xs-1">Pitch (X)</th>
           <th class="col-xs-1">Row (Y)</th>
           <th class="col-xs-1">Yaw(Z)</th>
@@ -15,8 +15,8 @@
       </thead>
       <tbody height="120px">
         <tr ng-repeat="logMessage in vm.logsMessagesCollection">
-          <td class="col-xs-3">{{logMessage.order}}</td>
-          <td class="col-xs-4">{{logMessage.timestamp}}</td>
+          <td class="col-xs-2">{{logMessage.order}}</td>
+          <td class="col-xs-5">{{logMessage.timestamp}}</td>
           <td class="col-xs-1">{{logMessage.pitch}}</td>
           <td class="col-xs-1">{{logMessage.row}}</td>
           <td class="col-xs-1">{{logMessage.yaw}}</td>

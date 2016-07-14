@@ -64,9 +64,9 @@ function LogsController() {
   };
 
   self.addCorrectMessage = function(message) {
-    // if (self.logsMessagesCollection.length === 5) {
-    //   self.logsMessagesCollection.pop();
-    // }
+    if (self.logsMessagesCollection.length === 5) {
+      self.logsMessagesCollection.pop();
+    }
     self.logsMessagesCollection.unshift(message);
     self.logsCorrectCounter++;
     self.updateLogsChart();
